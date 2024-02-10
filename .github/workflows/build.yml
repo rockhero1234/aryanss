@@ -22,13 +22,12 @@ jobs:
         uses: actions/checkout@master
         with:
           path: "src"
-    
-    - name: Checkout builds
+
+      - name: Checkout builds
         uses: actions/checkout@master
         with:
-          ref:  ${{ github.event.pull_request.head.ref }}
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-
+          ref: "builds"
+          path: "builds"
       
       - name: Clean old builds
         run: rm $GITHUB_WORKSPACE/builds/*.cs3
