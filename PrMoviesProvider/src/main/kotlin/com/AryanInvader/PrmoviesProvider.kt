@@ -22,6 +22,7 @@ class PRMoviesProvider : MainAPI() {
     )
 
     override val mainPage = mainPageOf(
+        "$mainUrl/release-year/2024/" to "Latest",    
         "$mainUrl/most-favorites/page/" to "Popular",
         "$mainUrl/director/netflix/page/" to "NetFlix",
         "$mainUrl/director/amazon-prime/page/" to "Amazon Prime",
